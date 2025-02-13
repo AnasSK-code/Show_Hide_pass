@@ -1,0 +1,85 @@
+/* Styles de base */
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #1e3c72, #2a5298);
+    font-family: Arial, sans-serif;
+}
+
+/* Conteneur principal */
+.container {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 30px;
+    border-radius: 10px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+/* Titre */
+h2 {
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+/* Zone du mot de passe */
+.password {
+    position: relative;
+    display: inline-block;
+}
+
+/* Champ de mot de passe */
+.password input {
+    width: 250px;
+    height: 40px;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    padding: 10px 40px 10px 10px;
+    background: rgba(255, 255, 255, 0.2);
+    color: #fff;
+    letter-spacing: 1.5px;
+    transition: 0.3s ease-in-out;
+    box-shadow: inset 5px 5px 10px rgba(0, 0, 0, 0.2),
+                inset -5px -5px 10px rgba(255, 255, 255, 0.1);
+}
+
+/* Placeholder styling */
+.password input::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 16px;
+}
+
+/* Effet focus */
+.password input:focus {
+    background: rgba(255, 255, 255, 0.3);
+    box-shadow: 0px 0px 8px rgba(255, 255, 255, 0.5);
+}
+
+/* Icône pour afficher/masquer le mot de passe */
+.pass-icon {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    width: 25px;
+    transform: translateY(-50%);
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out, opacity 0.3s;
+    opacity: 0.7;
+}
+
+/* Effet zoom au survol */
+.pass-icon:hover {
+    opacity: 1;
+    transform: scale(1.2) translateY(-50%);
+}
+
+/* Animation de zoom lors du clic */
+.pass-icon:active {
+    transform: scale(1.4) translateY(-50%);
+}
